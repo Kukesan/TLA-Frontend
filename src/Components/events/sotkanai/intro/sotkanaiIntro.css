@@ -17,13 +17,20 @@
     line-height: 1.5;
     padding-top: 2rem;
 }
-.sotkanai-icon{
+.sotkanai-icon {
     height: 50vh;
     width: auto;
     margin-left: auto;
     margin-right: auto;
     display: block;
-}
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .sotkanai-icon {
+      height: auto;
+      width: 70%;
+    }
+  }
 
 .sotknai-landing-heading-letter {
     font-size: 70px;
@@ -79,3 +86,15 @@
         font-size: 30px !important;      
     }
 }
+
+.set-width {
+    width: 70%;
+    padding: 10px;
+    margin: auto;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .set-width {
+      width: 90%;
+    }
+  }

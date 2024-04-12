@@ -34,9 +34,9 @@ function Intro() {
                     </Grid>
 
                 </Grid>
-                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                {/* <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                     <ReactPlayer url='https://fb.watch/hQ_elvyOkd/' />
-                </Box>
+                </Box> */}
             </Container>
         </div>
     );

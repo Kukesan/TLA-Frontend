@@ -1,0 +1,108 @@
+.sign-up--form-content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	column-gap: 8px;
+}
+.sign-up--form-content div:has(input[name="name"]) {
+	grid-row: 1;
+}
+.sign-up--form-content {
+	div:has(input[type="email"]),
+	div:has(input[type="password"]) {
+		grid-column: span 2;
+	}
+}
+
+.sign-up--image-preview {
+	grid-column: 2;
+	grid-row: span 2;
+	place-self: center;
+	margin-bottom: 20px;
+}
+
+.sign-up--image-preview > input {
+	display: none;
+}
+.sign-up--image-preview > div {
+	border-radius: 50%;
+	width: 100px;
+	/* height: 100px; */
+	aspect-ratio: 1 / 1;
+	background-color: hsl(0, 0%, 90%);
+	display: grid;
+	place-items: center;
+}
+
+.sign-up--image-preview .icon {
+	opacity: 0.5;
+}
+
+.sign-up--image-preview img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.memory-sharing-page--header {
+	display: grid;
+	grid-template-columns: auto auto 1fr auto auto;
+	grid-template-rows: 1fr;
+	grid-template-areas: "heading plus-icon . logged-in-as log-action";
+	align-items: center;
+}
+
+.memory-sharing-page--header h2 {
+	width: fit-content;
+	grid-area: heading;
+	font-family: Para;
+	margin: -4px 5px 0 0;
+	font-weight: 400;
+	font-size: 36px;
+}
+
+.memory-sharing-page--header > .add-memory {
+	grid-area: plus-icon;
+	margin-bottom: -5px;
+}
+
+.memory-sharing-page--header > .logged-in-as {
+	grid-area: logged-in-as;
+	margin-right: 5px;
+	font-size: 1rem;
+	/* height: fit-content; */
+}
+
+.memory-sharing-page--header > .log-action {
+	grid-area: log-action;
+}
+.memory-sharing-page--header + hr {
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.sign-up--form-content {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr;
+		column-gap: 4px;
+	}
+	.sign-up--form-content > * {
+		grid-column: 1;
+		grid-row: span 1;
+	}
+	.sign-up--form-content div:has(input[name="name"]) {
+		grid-row: 2;
+	}
+	.memory-sharing-page--header {
+		grid-template-columns: auto 1fr auto;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+			"heading plus-icon ."
+			"logged-in-as logged-in-as log-action";
+	}
+	.memory-sharing-page--header + hr {
+		transform: translateY(-1.5rem);
+	}
+}

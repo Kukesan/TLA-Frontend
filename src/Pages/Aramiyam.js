@@ -5,7 +5,14 @@ import Seminar from "../Components/events/aramiyam/seminar/Seminar";
 
 function Aramiyam() {
   return (
-    <>
+    <div
+      style={{
+        display: "-ms-flexbox",
+        justifyContent: "center",
+        alignItems: "flex-start",
+        flexDirection: "column",
+      }}
+    >
       <Helmet>
         <title>அரமியம் | தமிழ் இலக்கிய மன்றம்</title>
         <meta
@@ -17,9 +24,9 @@ function Aramiyam() {
           content="TLA, Tamil Literary Association, Aramiyam"
         />
       </Helmet>
-      <AramiyamIntro/>
-      <Seminar/>
-    </>
+      <AramiyamIntro />
+      <Seminar />
+    </div>
   );
 }
 

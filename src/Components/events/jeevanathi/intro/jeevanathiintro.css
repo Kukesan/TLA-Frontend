@@ -1,0 +1,103 @@
+.jeevanathi-landing-container-div {
+    height: 100vh;
+    background-image: url(../../../../images/Introduction/intro_back.png), url(../../../../images/Introduction/intro_back_flip.png);
+    background-position: right, left;
+    background-size: 20%;
+    background-repeat: no-repeat;
+}
+
+.jeevanathi-landing-container {
+    min-height: 90vh;
+}
+
+.jeevanathi-landing-heading1 {
+    color: #022345 !important;
+    font-size: 50px;
+    font-family: 'Heading' !important;
+    letter-spacing: normal;
+    text-align: center;
+    line-height: 1.5;
+    padding-top: 2rem;
+}
+
+.jeevanathi-icon {
+    height: 50vh;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.jeevanathi-landing-heading-letter {
+    font-size: 70px;
+    line-height: 1;
+}
+
+.intro-decription {
+    color: #717274 !important;
+    font-size: 30px;
+    font-family: 'Para' !important;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .jeevanathi-landing-container-div {
+        height: fit-content;
+    }
+
+    .intro-decription {
+        font-size: 20px;
+    }
+
+    .jeevanathi-landing-heading1 {
+        font-size: 30px;
+    }
+
+    .jeevanathi-landing-heading1 {
+        padding-top: 0.8rem;
+    }
+
+    .jeevanathi-landing-heading-letter {
+        font-size: 50px;
+    }
+
+    .jeevanathi-icon {
+        height: 30vh;
+    }
+
+    .jeevanathi-landing-container-div {
+        background-image: none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .intro-decription {
+        /* font-size: 30px !important; */
+
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .intro-decription {
+        /* font-size: 30px !important; */
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .intro-decription {
+        /* font-size: 30px !important; */
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .intro-description {
+        /* font-size: 30px !important; */
+    }
+}

@@ -1,14 +1,36 @@
+import React from 'react';
 import { Helmet } from "react-helmet";
+import { useLocation } from 'react-router-dom';
+import Schedule from "../Components/events/sotkanai/sotkanai-district/schedule/schedule";
+import SchoolList from "../Components/events/sotkanai/sotkanai-district/school-list/SchoolList";
+import SotkanaiDistrictGallery from "../Components/events/sotkanai/sotkanai-district/sotkanai-district-gallery/SotkanaiDistrictGallery";
+import Winners from '../Components/events/sotkanai/sotkanai-district/Sotkanai-winners-list/winnersList';
 
 const SotkanaiDistrict = () => {
+    const location = useLocation();
+
+    const { districtData } = location.state || {};
+    console.log(districtData);
+
+    if (!districtData) {
+        return <div>Error: District data not found.</div>;
+    }
+    const { name: districtName, schedule: districtSchedule,participated_schools:participated_schools,images:images,winning_schools:winning_schools } = districtData;
+
+
     return (
         <>
             <Helmet>
                 <title>சொற்கணை | தமிழ் இலக்கிய மன்றம்</title>
-                <meta name="description" content="சொற்கணை என்பது மாபெரும் விவாதச்சமர். இலங்கையின் 25 மாவட்டங்களில் தேர்வு செய்யப்பட்ட சிறந்த விவாத அணிகள் சொல் எனும் கணை கொண்டு களமாடும் இறுதிகட்ட விவாத சமர் தலை நகரில் பிரதான மண்டபத்தில் பல்லாயிரக்கணக்கானோர் முன்னிலையில் மிகவும் கோலாகலமாக நடைபெறுவதாகும்." />
-                <meta name="keywords" content="TLA, Tamil Literary Association, Thai Pongal" />
+                <meta name="description" content="Your description here" />
+                <meta name="keywords" content="Your keywords here" />
             </Helmet>
+            <Schedule districtName={districtName} districtSchedule={districtSchedule} />
+            <Winners winning_schools={winning_schools} />
+            {/* <SchoolList participated_schools={participated_schools} /> */}
+            {/* <SotkanaiDistrictGallery images={images} /> */}
         </>
     );
 }
+
 export default SotkanaiDistrict;

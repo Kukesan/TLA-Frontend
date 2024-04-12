@@ -32,7 +32,6 @@
 
 .intro-heading2 {
     color: #080808 !important;
-    ;
     font-size: 35px !important;
     font-family: 'Para' !important;
     letter-spacing: normal;
@@ -45,12 +44,18 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    .intro-container-div {
+        /* height: 100vh; */
+        background-image:none;
+    }
     .intro-heading {
         font-size: 80px !important;
     }
     
     .intro-heading1 {
         font-size: 30px !important;
+        width: 100%;
+        padding: 0 !important;
     }
     
     
@@ -72,11 +77,8 @@
         
     }
     
-    
     .intro-heading2 {
-       
         font-size: 35px !important;
-        
     }
 }
 

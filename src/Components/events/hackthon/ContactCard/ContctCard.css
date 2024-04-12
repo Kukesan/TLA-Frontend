@@ -1,0 +1,15 @@
+.endCard{
+    width: fit-content;
+    background-color:#E3E7EB;
+    padding: 10px 60px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    gap:10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact{
+    transform: translateY(3pt);
+}

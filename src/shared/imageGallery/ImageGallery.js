@@ -20,9 +20,9 @@ const ImageGallery = ({ images }) => {
             <Grid
                 container
                 direction="row"
-                justifyContent="space-around"
+                justifyContent="center"
                 alignItems="center"
-                spacing={2}
+                spacing={0}
             >
                 {images.map((gallery, index) => <>
                     <Grid item key={index} >

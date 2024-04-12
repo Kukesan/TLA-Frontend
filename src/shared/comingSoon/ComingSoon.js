@@ -16,7 +16,7 @@ const ComingSoon = () => {
 
                 </Grid>
                 <Grid item sm='12'>
-                    <div style={{ height: '5vh' }}></div>
+                    <div style={{ height: '3vh' }}></div>
                     <Container maxWidth="md">
                         <div className="intro-heading1">இந்தப் பக்கம் இன்னும் உருவாக்கப்படவில்லை.</div>
 
