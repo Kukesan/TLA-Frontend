@@ -152,7 +152,7 @@ function Contact() {
                 <Heading>தொடர்புகள்</Heading>
 
                 <Grid container spacing={2}>
-                    <Grid item xs={12} sm={10}>
+                    <Grid item className="col-left">
                         <Grid item>
                             <div className="contact-row">பெயர்</div>
                             <div className="contact-icon-div">
@@ -294,7 +294,7 @@ function Contact() {
                         </Grid>
                     </Grid>
 
-                    <Grid item xs={12} sm={6}>
+                    <Grid item>
                         <div className="col-right">
                             <Grid item>
                                 <div
