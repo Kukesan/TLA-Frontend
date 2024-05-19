@@ -13,7 +13,7 @@ export default function MemoryCardItem({ data }) {
 
 		<div className="image-container">
 			{data.images.map(image => {
-				return <img src={image} />
+				return <img src={image} key={image} />
 			})}
 		</div>
 

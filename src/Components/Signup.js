@@ -47,7 +47,6 @@ function Signup({ changeModal }) {
 		const { name, value } = e.target;
 		setFormData((prevData) => ({ ...prevData, [name]: value }));
 
-		
 		switch (name) {
 			case 'email':
 				setFormValid((prevFormValid) => ({ ...prevFormValid, email: validateEmail(value) }));
@@ -65,8 +64,6 @@ function Signup({ changeModal }) {
 			default:
 			// Handle default case if needed
 		}
-		console.log(formData.password);
-		console.log(formData.confirmPassword);
 	};
 
 	const imageUrl = useMemo(() => {
@@ -85,7 +82,7 @@ function Signup({ changeModal }) {
 				return;
 			}
 
-			const { confirmPassowrd, ...createUserData } = formData;
+			const { confirmPassword, ...createUserData } = formData;
 			await signup(createUserData).then(auth.loggedIn);
 
 			setResponseMessage("உங்களுடைய தகவல் வெற்றிகரமாக அனுப்பப்பட்டுள்ளது")
@@ -174,11 +171,11 @@ function Signup({ changeModal }) {
 				/>
 				<Input
 					onChange={handleInputChange}
-					value={formData.confirmPassowrd}
+					value={formData.confirmPassword}
 					name="confirmPassword"
 					label="கடவுச்சொல்"
 					icon="password"
-					showValidation={buttonClicked && (!formValid.confirmPassowrd || (formData.password !== formData.confirmPassowrd))}
+					showValidation={buttonClicked && (!formValid.confirmPassword || (formData.password !== formData.confirmPassword))}
 					validationMessage="கடவுச்சொல்லை மீளவும் சரியாக உள்ளிடவும்"
 					type="password"
 				/>

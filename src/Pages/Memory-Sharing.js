@@ -82,7 +82,7 @@ export default function MemorySharing() {
 				<hr />
 
 				{sharedMemoryItems.map(item => {
-					return <MemoryCardItem key={item.title} data={item} />
+					return <MemoryCardItem key={item._id} data={item} />
 				})}
 
 			</Container>
