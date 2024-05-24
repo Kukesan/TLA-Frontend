@@ -13,7 +13,7 @@
   
   .event-landing-heading1 {
     color: #022345 !important;
-    font-size: 50px;
+    font-size: 50px !important;
     font-family: "Heading" !important;
     letter-spacing: normal;
     text-align: center;
@@ -45,18 +45,21 @@
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
     .event-landing-container-div {
-      height: fit-content;
+      height: fit-content !important;
+      background-image: none;
+      margin-bottom: 20px;
     }
-  
+
+    .event-landing-container {
+      min-height: 20vh;
+  }
+
     .event-intro-decription {
       font-size: 25px;
     }
   
     .event-landing-heading1 {
-      font-size: 30px;
-    }
-  
-    .event-landing-heading1 {
+      font-size: 36px !important;
       padding-top: 0.8rem;
     }
   
@@ -64,12 +67,8 @@
       font-size: 50px;
     }
   
-    .thaievent-icon {
+    .event-icon {
       height: 30vh;
-    }
-  
-    .event-landing-container-div {
-      background-image: none;
     }
   }
   

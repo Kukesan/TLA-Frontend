@@ -22,6 +22,7 @@ import Logo from "../../../images/Logo-Nav/logo.png";
 import { NavLink } from "react-router-dom";
 import { colors } from "material-ui/styles";
 import { Padding } from "@mui/icons-material";
+import { useMediaQuery } from "@mui/material";
 const drawerWidth = 240;
 
 // const navItems = [{
@@ -87,6 +88,8 @@ function Navbar(props) {
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
+  const isXs = useMediaQuery('(max-width:600px)');
+
   return (
     <Box sx={{ display: "flex", height: "64px" }} className="navbar-container">
       <AppBar component="nav" className="appBar">
@@ -101,22 +104,33 @@ function Navbar(props) {
             >
               <MenuIcon />
             </IconButton>
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-              className="nav-Items"
-            >
-              <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-                <img
-                  src={Logo}
-                  alt=""
-                  height={50}
-                  style={{ marginRight: "10px" }}
-                />
-                <p className="uni-name">மொறட்டுவைப் பல்கலைக்கழக தமிழ் இலக்கிய மன்றம்</p>
-              </Link>
-            </Typography>
+            {isXs ? (
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
+                className="nav-Items"
+              >
+                <p className="uni-name">தமிழ் இலக்கிய மன்றம்</p>
+              </Typography>
+            ) : (
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
+                className="nav-Items"
+              >
+                <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+                  <img
+                    src={Logo}
+                    alt=""
+                    height={50}
+                    style={{ marginRight: "10px" }}
+                  />
+                  <p className="uni-name">மொறட்டுவைப் பல்கலைக்கழக தமிழ் இலக்கிய மன்றம்</p>
+                </Link>
+              </Typography>
+            )}
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (
                 <NavLink
