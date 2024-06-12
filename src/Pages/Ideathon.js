@@ -4,6 +4,7 @@ import Agenda from "../Components/events/hackthon/agenda/Agenda";
 import HackIntro from "../Components/events/hackthon/intro/HackIntro";
 import { Helmet } from "react-helmet";
 import Prize from "../Components/events/hackthon/prize/prize";
+import Sponsors from "../Components/events/hackthon/sponsors/Sponsors";
 
 const Ideathon = () => {
     return (
@@ -16,6 +17,7 @@ const Ideathon = () => {
             <HackIntro />
             <RulesButton />
             <Agenda />
+            <Sponsors/>
             <Prize/>
             <ContactCard />
         </>

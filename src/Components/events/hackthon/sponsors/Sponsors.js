@@ -9,43 +9,16 @@ import "react-image-gallery/styles/css/image-gallery.css";
 
 const sponsorsDetails = [
     {
-        title: 'Platinum Sponsor',
-        img: "https://live.staticflickr.com/65535/52613194496_2d3d39870c_o.png",
-        descriiption: <p>Dear Designers and coders, <br /> we're expanding our family!<br /> Join at huex.<br /> <a className="link" href="mailto: careers@huex.io">careers@huex.io</a></p>
-    },
-    {
         title: 'Bronze Sponsor',
-        img: "https://live.staticflickr.com/65535/52621520282_f2868feb7f_o.png",
-        descriiption: <p>SenzAgro is a global real-time agricultural ecosystem intelligence platform created for 500 million smallholder farmers</p>
-    },
-    //     {
-    //         title: 'அனுசரணையாளர்',
-    //         img: img2,
-    //         descriiption: 'Sponsor 2 details'
-    //     },
-    //     {
-    //         title: 'அனுசரணையாளர்',
-    //         img: img3,
-    //         descriiption: 'Sponsor 3 details'
-    //     },
+        img: "https://a2zcleangimages.s3.amazonaws.com/TlaImages/JRide-logo-01-(1).png",
+        descriiption: <p>JRide is the ultimate solution for hassle-free transportation in Sri Lanka. Our online taxi app offers a quick and easy way to book any kind of vehicle ride, from cars to tuk-tuks, to get you where you need to go.</p>
+    }
 ]
-
-const sponsorAds = [
-    {
-        original: 'https://live.staticflickr.com/65535/52613692573_bb70fd2a1d_o.png',
-        thumbnail: 'https://live.staticflickr.com/65535/52613692573_965556921d_w.jpg',
-    },
-    {
-        original: 'https://live.staticflickr.com/65535/52613626390_0a7b41282f_o.png',
-        thumbnail: 'https://live.staticflickr.com/65535/52613626390_afc56b4476_w.jpg',
-    },
-]
-
 function Sponsors() {
     return (
         <div className="sponsors-container-div">
             <Container maxWidth='lg' className="sponsors-container" sx={{ pb: 4 }}>
-                <Heading>அனுசரணை வழங்குவோர்</Heading>
+                <h2>அனுசரணை வழங்குவோர்</h2>
                 <Grid
                     container
                     direction="row"
