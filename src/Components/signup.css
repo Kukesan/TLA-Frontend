@@ -1,108 +1,149 @@
-.sign-up--form-content {
+Signup Form Styling .sign-up--form-content {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(5, 1fr);
-	column-gap: 8px;
-}
-.sign-up--form-content div:has(input[name="name"]) {
-	grid-row: 1;
-}
-.sign-up--form-content {
-	div:has(input[type="email"]),
-	div:has(input[type="password"]) {
-		grid-column: span 2;
-	}
+	grid-template-columns: 1fr 2fr;
+	/* Adjust columns for profile picture and form fields */
+	grid-template-rows: auto;
+	column-gap: 16px;
+	/* Increased space between columns */
+	row-gap: 16px;
 }
 
+.sign-up--top-section {
+	display: flex;
+	align-items: center;
+	/* Center items vertically */
+	gap: 100px;
+	/* Space between the items */
+}
+
+/* Profile Picture Styling */
 .sign-up--image-preview {
-	grid-column: 2;
-	grid-row: span 2;
-	place-self: center;
-	margin-bottom: 20px;
+	grid-column: 1 / span 1;
+	/* Profile picture takes the first column */
+	grid-row: 1 / span 2;
+	/* Profile picture spans two rows */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 16px;
 }
 
-.sign-up--image-preview > input {
+.sign-up--image-preview input {
 	display: none;
 }
-.sign-up--image-preview > div {
-	border-radius: 50%;
-	width: 100px;
-	/* height: 100px; */
-	aspect-ratio: 1 / 1;
-	background-color: hsl(0, 0%, 90%);
-	display: grid;
-	place-items: center;
-}
 
-.sign-up--image-preview .icon {
-	opacity: 0.5;
+.sign-up--image-preview div {
+	width: 120px;
+	/* Adjust width and height */
+	height: 120px;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .sign-up--image-preview img {
 	width: 100%;
 	height: 100%;
-	border-radius: 50%;
+	object-fit: cover;
 }
 
-.memory-sharing-page--header {
-	display: grid;
-	grid-template-columns: auto auto 1fr auto auto;
-	grid-template-rows: 1fr;
-	grid-template-areas: "heading plus-icon . logged-in-as log-action";
-	align-items: center;
+/* Form Fields Styling */
+.sign-up--form-content>div {
+	grid-column: 2;
+	/* All form fields take the second column */
 }
 
-.memory-sharing-page--header h2 {
-	width: fit-content;
-	grid-area: heading;
-	font-family: Para;
-	margin: -4px 5px 0 0;
-	font-weight: 400;
-	font-size: 36px;
+.sign-up--form-content>div:has(input[name="name"]),
+.sign-up--form-content>div:has(input[name="phoneNo"]) {
+	grid-row: 1;
+
+	/* Name and phone number are on the first row */
 }
 
-.memory-sharing-page--header > .add-memory {
-	grid-area: plus-icon;
-	margin-bottom: -5px;
+.sign-up--form-content>div:has(input[type="email"]),
+.sign-up--form-content>div:has(input[type="password"]) {
+	grid-row: 2;
+	/* Email and password are on the second row */
+	grid-column: span 2;
+	/* Span both columns */
 }
 
-.memory-sharing-page--header > .logged-in-as {
-	grid-area: logged-in-as;
-	margin-right: 5px;
-	font-size: 1rem;
-	/* height: fit-content; */
+.sign-up--form-content>.student-status-select {
+	grid-row: 3;
+	/* Student status on the third row */
+	grid-column: span 2;
+	/* Span both columns */
 }
 
-.memory-sharing-page--header > .log-action {
-	grid-area: log-action;
-}
-.memory-sharing-page--header + hr {
-	margin-top: 0px;
-	margin-bottom: 20px;
+.sign-up--form-content>div:has(input[name="indexNumber"]) {
+	grid-row: 4;
+	/* Index number on the fourth row */
+	grid-column: span 2;
+	/* Span both columns */
 }
 
-/* Extra small devices (phones, 600px and down) */
+/* Button Styling */
+.contact-send-button {
+	background-color: #022345;
+	/* Replace with your color */
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.contact-send-button:hover {
+	background-color: #021b2a;
+	/* Darker shade for hover effect */
+}
+
+.response-message {
+	margin-top: 20px;
+	font-size: 16px;
+}
+
+/* Media Queries for Mobile Devices */
 @media only screen and (max-width: 600px) {
 	.sign-up--form-content {
 		grid-template-columns: 1fr;
-		grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr;
+		/* Single column layout on small screens */
+		grid-template-rows: auto auto auto auto auto auto;
+		/* Adjust rows accordingly */
 		column-gap: 4px;
+		row-gap: 16px;
 	}
-	.sign-up--form-content > * {
+
+	.sign-up--form-content>div {
 		grid-column: 1;
-		grid-row: span 1;
 	}
-	.sign-up--form-content div:has(input[name="name"]) {
+
+	.sign-up--image-preview {
+		grid-column: 1;
+		grid-row: 1;
+		margin-bottom: 16px;
+	}
+
+	.sign-up--form-content>div:has(input[name="name"]),
+	.sign-up--form-content>div:has(input[name="phoneNo"]) {
 		grid-row: 2;
 	}
-	.memory-sharing-page--header {
-		grid-template-columns: auto 1fr auto;
-		grid-template-rows: auto auto;
-		grid-template-areas:
-			"heading plus-icon ."
-			"logged-in-as logged-in-as log-action";
+
+	.sign-up--form-content>div:has(input[type="email"]),
+	.sign-up--form-content>div:has(input[type="password"]) {
+		grid-row: 3;
 	}
-	.memory-sharing-page--header + hr {
-		transform: translateY(-1.5rem);
+
+	.sign-up--form-content>.student-status-select {
+		grid-row: 4;
+	}
+
+	.sign-up--form-content>div:has(input[name="indexNumber"]) {
+		grid-row: 5;
 	}
 }
+
+/* இளங்கலை மாணவர் */
