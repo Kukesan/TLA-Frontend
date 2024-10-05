@@ -1,10 +1,11 @@
 import SeniorsDetails from "../Components/Seniors/SeniorsDetails";
-import SeniorsIntro from "../Components/Seniors/SeniorsIntro";
+import { guidance } from "../shared/EventDetails";
+import Intro from "../shared/intro/Intro";
 
 const Seniors = () => {
     return (
         <>
-            <SeniorsIntro />
+            <Intro event={guidance[1]} />
             <SeniorsDetails />
         </>
     );
