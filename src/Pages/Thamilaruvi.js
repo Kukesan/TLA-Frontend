@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import ThamilaruviIntro from "../Components/events/thamilaruvi/intro/thamilaruviIntro";
 import ThamilaruviGallery from "../Components/events/thamilaruvi/gallery/ThamilaruviGallery";
+import Agenda from "../Components/events/thamilaruvi/agenda/Agenda";
 
 function Thamilaruvi() {
   return (
@@ -18,6 +19,7 @@ function Thamilaruvi() {
         />
       </Helmet>
       <ThamilaruviIntro />
+      <Agenda />
       <ThamilaruviGallery />
     </>
   );
