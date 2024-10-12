@@ -27,6 +27,7 @@ import TeamsPage from "./Pages/Teams-Page";
 
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
+import MakkalMantramVote from "./Pages/MakkalMantramVote";
 import Seniors from "./Pages/Seniors";
 
 function Router() {
@@ -139,6 +140,10 @@ function Router() {
         {
             path: "contact",
             element: <Contact />,
+        },
+         {
+           path: "vote",
+           element: <MakkalMantramVote />,
         },
     ]);
 }

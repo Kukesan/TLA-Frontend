@@ -1,0 +1,17 @@
+.bar-chart-container-mmvc {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 400px;
+    width: 400px;
+}
+
+@media all and (max-width: 450px) {
+    .bar-chart-container-mmvc {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        height: 400px;
+        width: 300px;
+    }
+}

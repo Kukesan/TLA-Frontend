@@ -358,6 +358,7 @@ function Navbar(props) {
                   <Button
                     sx={{ backgroundColor: "#022345", color: "white" }}
                     onClick={() => openModal("signup")}
+                    style={{ marginLeft: "3px" }}
                   >
                     Sign Up
                   </Button>

@@ -39,7 +39,7 @@ const BooksContainer = () => {
                 <hr class="underline"></hr>
                 <div className="books">
                     {books
-                        .filter(book => book.isTlaBook)
+                        .filter(book => book.isTlaBook && book.isAccept)
                         .sort((a, b) => a.year - b.year)
                         .map((book) => {
                             return (
@@ -60,7 +60,7 @@ const BooksContainer = () => {
                 <hr class="underline"></hr>
                 <div className="books">
                     {books
-                        .filter(book => !book.isTlaBook)
+                        .filter(book => !book.isTlaBook && book.isAccept)
                         .sort((a, b) => a.year - b.year)
                         .map((book) => {
                             return (
