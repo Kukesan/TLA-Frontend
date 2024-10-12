@@ -1,122 +1,65 @@
-.winners-conatainer{
-    min-height: 35vh;
-}
-
-.sotkanai-landing-containerx {
-    display: flex;
-    justify-content: center; /* Center align the container horizontally */
-    border-radius: 25px; /* Border radius of 10px */
-    padding: 20px; /* Padding */
-    background-color: #DFE5E8; /* Background color */
-    background-image: url(../../../../images/Introduction/intro_back.png), url(../../../../images/Introduction/intro_back_flip.png);
-    background-position: right, left;
-    background-size: 20%;
-    background-repeat: no-repeat;
-
-  }
-  .head-landing-heading1x {
-    color: #022345 !important;
-    font-size: 40px !important;
-    font-family: 'Heading' !important;
-    letter-spacing: normal;
-    text-align: center;
-    line-height: 1.5;
-    padding-top: 2rem;
-    margin-bottom: 10px;
-}
-.head-landing-heading2x{
-    color: #022345 !important;
-    font-size: 35px !important;
-    font-family: 'Heading' !important;
-    letter-spacing: normal;
-    text-align: center;
-    line-height: 1;
-    padding-top: 2rem;
-    margin-bottom: 25px;
-
-}
-
-.head-landing-containerx {
-    border-radius: 10px; /* Border radius of 10px */
-    border-color: #022345;
-    padding: 20px; /* Padding */
-    background-color: #ffffff; /* Background color */
-    width: 60%;
-    margin: 10px auto; /* Center align using auto margin */
-    display: flex;
-    flex-direction: column; /* Set flex direction to column */
-    align-items: center; /* Center align items horizontally */
-    justify-content: center; /* Center align items vertically */
-    outline: 2px solid black; /* Add a black outline around the background images */
-
-}
-
-
 .medals-section {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-  }
-  
-  .medal {
+}
+
+.medal {
     margin: 0 20px;
-  }
-  
-  .medal-img {
-    width: 100px;
-    height: 100px;
-  }
-  
-
-  .gold-place {
-    width: 175px;
-    height: 160px; /* Larger gold medal */
 }
 
-.silver-place, .bronze-place {
-    width: 100px;
-    height: 100px; /* Smaller silver and bronze medals */
+.medal-img {
+    width: 130px; 
+    height: 130px; 
 }
-  .trophy-section {
+
+.gold-place .medal-img {
+    width: 200px; 
+    height: 200px; 
+}
+
+.silver-place .medal-img, .bronze-place .medal-img {
+    width: 150px; 
+    height: 150px; 
+}
+
+.trophy-section {
     margin-top: 25px;
-  }
-  
-  .trophy-img {
-    width: 180px;
-    height: 190px;
-  }
-
-  .medal p, .trophy-section p {
-    margin-top: 5px; /* Add some spacing between image and text */
-    font-size: 20px; /* Adjust font size for readability */
-    text-align: center; /* Ensure text stays centered */
-    
 }
 
+.trophy-img {
+    width: 200px;
+    height: 220px;
+}
+
+.medal p, .trophy-section p {
+    margin-top: 5px; 
+    font-size: 25px; 
+    text-align: center; 
+}
 
 @media only screen and (max-width: 600px) {
-    .head-landing-containerx {
-        width: auto; /* Reset width for mobile screens */
-        margin: 0; /* Reset margin */
-        border-radius: 0; /* Reset border radius */
-        padding: 0; /* Reset padding */
-        background-color: transparent; /* Reset background color */
-        display: block; /* Reset display */
-        flex-direction: row; /* Reset flex direction */
-        align-items: flex-start; /* Reset align items */
-        justify-content: flex-start; /* Reset justify content */
+    .medal-img {
+        width: 80px; /* Smaller medals on mobile */
+        height: 80px;
+    }
+    
+    .gold-place .medal-img {
+        width: 120px; /* Smaller gold medal for mobile */
+        height: 120px;
+    }
+
+    .silver-place .medal-img, .bronze-place .medal-img {
+        width: 100px; /* Adjusted silver and bronze size for mobile */
+        height: 100px;
+    }
+
+    .trophy-img {
+        width: 150px; /* Adjusted trophy size */
+        height: 160px;
+    }
+
+    .medal p, .trophy-section p {
+        font-size: 18px; /* Slightly smaller text for mobile */
     }
 }
-
-
-.head-landing-body1x{
-    color: #022345 !important;
-    font-size: 25px !important;
-    font-family: 'Heading' !important;
-    letter-spacing: normal;
-    line-height: 1.5;
-    padding-top: 5px;
-    text-align: center;
-}
-
-  
