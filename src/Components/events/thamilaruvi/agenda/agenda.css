@@ -143,7 +143,6 @@
     font-size: 46px;
     font-family: "Heading" !important;
     color: #012244;
-
 }
 
 .event-container-2 {
@@ -188,7 +187,7 @@
 
 .event-list-text{
     font-size: 22px;
-    margin: 0;
+    margin: 0 !important;
     text-align: center;
 }
 
@@ -242,4 +241,8 @@
 .events h2 {
     font-weight: normal;
     padding: 0;
+}
+
+.invitation-img{
+    margin-top: 4vh;
 }
