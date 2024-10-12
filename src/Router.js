@@ -27,6 +27,7 @@ import Contact from "./Components/Home/Contact/contact";
 
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
+import MakkalMantramVote from "./Pages/MakkalMantramVote";
 
 function Router() {
   return useRoutes([
@@ -134,6 +135,10 @@ function Router() {
     {
       path: "contact",
       element: <Contact />,
+    },
+    {
+      path: "vote",
+      element: <MakkalMantramVote />,
     },
   ]);
 }
