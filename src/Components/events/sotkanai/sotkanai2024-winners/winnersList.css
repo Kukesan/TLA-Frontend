@@ -10,12 +10,10 @@
 
 .medal-img {
     width: 130px; 
-    height: 130px; 
 }
 
-.gold-place .medal-img {
-    width: 200px; 
-    height: 200px; 
+.gold-place{
+    width: 130px; 
 }
 
 .silver-place .medal-img, .bronze-place .medal-img {
