@@ -347,7 +347,7 @@ function Navbar(props) {
                   {item.name}
                 </NavLink>
               ))}
-              {!auth.isLoggedIn && (
+              {/* {!auth.isLoggedIn && (
                 <>
                   <Button
                     sx={{ backgroundColor: "#022345" }}
@@ -371,7 +371,7 @@ function Navbar(props) {
                 >
                   Logout
                 </Button>
-              )}
+              )} */}
             </Box>
           </Toolbar>
         </Container>
@@ -399,12 +399,12 @@ function Navbar(props) {
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
       </Box>
-      <Modal isOpen={showModal === "login"} onClose={closeModal}>
+      {/* <Modal isOpen={showModal === "login"} onClose={closeModal}>
         <Login changeModal={openModal} />
       </Modal>
       <Modal isOpen={showModal === "signup"} onClose={closeModal}>
         <Signup changeModal={openModal} />
-      </Modal>
+      </Modal> */}
     </Box>
   );
 }
