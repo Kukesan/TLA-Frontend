@@ -88,12 +88,15 @@ const MakkalMantramVoteContainer = ({ showChart }) => {
     <div className="mmvc-main-container">
       <div className="mmvc-container">
         <div className="mmvc-heading">மக்கள் மன்றம்</div>
-        <img
-          src={MakkalMantramIcon}
-          className="mmvc-image"
-          alt="icon"
-          loading="lazy"
-        />
+        {showChart ? null : (
+          <img
+            src={MakkalMantramIcon}
+            className="mmvc-image"
+            alt="icon"
+            loading="lazy"
+          />
+        )}
+
         <div className="mmvc-question">{questionData.question}</div>
 
         {/*  */}
