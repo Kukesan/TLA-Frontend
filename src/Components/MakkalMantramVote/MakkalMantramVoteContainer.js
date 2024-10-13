@@ -72,7 +72,11 @@ const MakkalMantramVoteContainer = ({ showChart }) => {
             localStorage.setItem("mmvs", "true");
           })
           .catch((error) => {
-            alert("மன்னிக்கவும், உங்கள் வாக்கை பதிவு செய்ய முடியவில்லை !");
+            if (error.response && error.response.status === 429) {
+              alert("மன்னிக்கவும், நீங்கள் ஏற்கனவே வாக்களித்துள்ளீர்கள்!");
+            } else {
+              alert("மன்னிக்கவும், உங்கள் வாக்கை பதிவு செய்ய முடியவில்லை !");
+            }
           });
       } catch (error) {
         alert("மன்னிக்கவும், உங்கள் வாக்கை பதிவு செய்ய முடியவில்லை !");
