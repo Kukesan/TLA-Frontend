@@ -6,7 +6,7 @@ import ThumbDown from "./ThumbDown.svg";
 import axios from "axios";
 import BarChart from "./BarChart";
 import AutorenewIcon from "@material-ui/icons/Autorenew";
-const MakkalMantramVoteContainer = () => {
+const MakkalMantramVoteContainer = ({ showChart }) => {
   const [questionData, setQuestionData] = useState({});
   const [loading, setLoading] = useState(true);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -91,7 +91,10 @@ const MakkalMantramVoteContainer = () => {
           loading="lazy"
         />
         <div className="mmvc-question">{questionData.question}</div>
+
+        {/*  */}
         <div className="mmvc-response">
+          {/* Status 1 - ToBe Opened */}
           {questionData.status === "1" && (
             <div className="mmvc-tobe">
               வாக்களிப்பு இன்னும் ஆரம்பிக்கவில்லை
@@ -103,22 +106,26 @@ const MakkalMantramVoteContainer = () => {
               />
             </div>
           )}
-          {questionData.status === "2" && (
+          {/* Status 2 - Opened */}
+
+          {questionData.status === "2" ? (
             <div className="mmvc-opened">
               {isSubmitted ? (
                 <div>
                   <div className="mmvc-vote-done">
                     உங்கள் வாக்கு பதிவுசெய்யப்பட்டது
                   </div>
-                  <div className="mmvc-result-view">
-                    மக்கள் தீர்ப்பினை பார்வையிட{" "}
-                    <AutorenewIcon
-                      onClick={() => {
-                        setTriggerLoad(Date.now);
-                      }}
-                      className={loading ? "refresh-icon-load" : ""}
-                    />
-                  </div>
+                  {showChart ? (
+                    <div className="mmvc-result-view">
+                      மக்கள் தீர்ப்பினை பார்வையிட{" "}
+                      <AutorenewIcon
+                        onClick={() => {
+                          setTriggerLoad(Date.now);
+                        }}
+                        className={loading ? "refresh-icon-load" : ""}
+                      />
+                    </div>
+                  ) : null}
                 </div>
               ) : (
                 <>
@@ -155,15 +162,20 @@ const MakkalMantramVoteContainer = () => {
                 </>
               )}
             </div>
+          ) : null}
+          {/* if question is closed*/}
+          {questionData.status === "3" && showChart !== true && (
+            <div className="mmvc-vote-done">வாக்களிப்பு நிறைவடைந்தது</div>
           )}
-          {questionData.status === "3" && (
+          {/* Status 3: Closed */}
+          {showChart && questionData.status === "3" ? (
             <div className="mmvc-closed">
               <BarChart
                 answerValues={results.answerValues || []}
                 counts={results.counts || []}
               />
             </div>
-          )}
+          ) : null}
         </div>
       </div>
     </div>

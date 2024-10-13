@@ -29,123 +29,128 @@ import Login from "./Components/Login";
 import Signup from "./Components/Signup";
 import MakkalMantramVote from "./Pages/MakkalMantramVote";
 import Seniors from "./Pages/Seniors";
+import MakkalMantramVoteResults from "./Pages/MakkalMantramVoteResults";
 
 function Router() {
-    return useRoutes([
+  return useRoutes([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/events",
+      children: [
         {
-            path: "/",
-            element: <Home />,
-        },
-        {
-            path: "/events",
-            children: [
-                {
-                    path: "thaipongal",
-                    element: <Thaipongal />,
-                },
-                {
-                    path: "sotkanai",
-                    element: <SotkanaiMain />,
-                },
-                {
-                    path: "sotkanai-district",
-                    element: <SotkanaiDistrict />,
-                },
-                {
-                    path: "aramiyam",
-                    element: <Aramiyam />,
-                },
-                {
-                    path: "jeevanathi",
-                    element: <Jeevanathi />,
-                },
-                {
-                    path: "vani-villa",
-                    element: <VaniVilla />,
-                },
-                {
-                    path: "kovil",
-                    element: <Kovil />,
-                },
-                {
-                    path: "blood-donation",
-                    element: <BloodDonation />,
-                },
-                {
-                    path: "food-festival",
-                    element: <FoodFestival />,
-                },
-                {
-                    path: "thamilaruvi",
-                    element: <Thamilaruvi />,
-                },
-                {
-                    path: "brammam",
-                    element: <Brammam />,
-                },
-                {
-                    path: "brammam/:event",
-                    element: <BrammamEventAbout />,
-                },
-                {
-                    path: "brammam/:event/rules",
-                    element: <ExtraInfo />,
-                },
-                {
-                    path: "comingSoon",
-                    element: <ComingSoon />,
-                },
-                {
-                    path: "ppl",
-                    element: <PPL />,
-                },
-                {
-                    path: "movie-night",
-                    element: <MovieNight />,
-                },
-            ],
+          path: "thaipongal",
+          element: <Thaipongal />,
         },
         {
-            path: "ideathon",
-            element: <Ideathon />,
+          path: "sotkanai",
+          element: <SotkanaiMain />,
         },
         {
-            path: "/memory-sharing",
-            element: <MemorySharing />,
+          path: "sotkanai-district",
+          element: <SotkanaiDistrict />,
         },
         {
-            path: "/books",
-            element: <Books />,
+          path: "aramiyam",
+          element: <Aramiyam />,
         },
         {
-            path: "/seniors",
-            element: <Seniors />,
+          path: "jeevanathi",
+          element: <Jeevanathi />,
         },
         {
-            path: "teams",
-            element: <TeamsPage />,
+          path: "vani-villa",
+          element: <VaniVilla />,
         },
         {
-            path: "login",
-            element: <Login />,
+          path: "kovil",
+          element: <Kovil />,
         },
         {
-            path: "signup",
-            element: <Signup />,
+          path: "blood-donation",
+          element: <BloodDonation />,
         },
         {
-            path: "history",
-            element: <HistoryPage />,
+          path: "food-festival",
+          element: <FoodFestival />,
         },
         {
-            path: "contact",
-            element: <Contact />,
+          path: "thamilaruvi",
+          element: <Thamilaruvi />,
         },
-         {
-           path: "vote",
-           element: <MakkalMantramVote />,
+        {
+          path: "brammam",
+          element: <Brammam />,
         },
-    ]);
+        {
+          path: "brammam/:event",
+          element: <BrammamEventAbout />,
+        },
+        {
+          path: "brammam/:event/rules",
+          element: <ExtraInfo />,
+        },
+        {
+          path: "comingSoon",
+          element: <ComingSoon />,
+        },
+        {
+          path: "ppl",
+          element: <PPL />,
+        },
+        {
+          path: "movie-night",
+          element: <MovieNight />,
+        },
+      ],
+    },
+    {
+      path: "ideathon",
+      element: <Ideathon />,
+    },
+    {
+      path: "/memory-sharing",
+      element: <MemorySharing />,
+    },
+    {
+      path: "/books",
+      element: <Books />,
+    },
+    {
+      path: "/seniors",
+      element: <Seniors />,
+    },
+    {
+      path: "teams",
+      element: <TeamsPage />,
+    },
+    {
+      path: "login",
+      element: <Login />,
+    },
+    {
+      path: "signup",
+      element: <Signup />,
+    },
+    {
+      path: "history",
+      element: <HistoryPage />,
+    },
+    {
+      path: "contact",
+      element: <Contact />,
+    },
+    {
+      path: "vote",
+      element: <MakkalMantramVote />,
+    },
+    {
+      path: "vote/mm-2024-results-screen",
+      element: <MakkalMantramVoteResults />,
+    },
+  ]);
 }
 
 export default Router;
