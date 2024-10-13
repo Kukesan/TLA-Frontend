@@ -45,7 +45,7 @@
 }
 
 .mmvc-vote-done {
-    font-size: 19px;
+    font-size: 30px;
     font-weight: 400;
     line-height: 24px;
     text-align: center;
@@ -79,9 +79,10 @@
 }
 
 .mmvc-result-view {
+    font-family: "Para" !important;
     margin-top: 40px;
-    font-family: Anonymous Pro;
-    font-size: 18px;
+    /* font-family: Anonymous Pro; */
+    font-size: 26px;
     /* font-style: italic; */
     font-weight: 400;
     line-height: 20px;
@@ -123,7 +124,7 @@
     }
 
     .mmvc-vote-done {
-        font-size: 16px;
+        font-size: 25px;
         font-weight: 400;
         line-height: 24px;
         text-align: center;
@@ -169,5 +170,16 @@
         flex-direction: column;
         gap: 20px;
         align-items: center;
+    }
+}
+
+
+@media all and (max-width: 596px) {
+    .mmvc-tobe {
+        font-family: "Para" !important;
+        font-size: 30px;
+        margin: 0;
+        margin-bottom: 2vh;
+        flex-direction: column;
     }
 }

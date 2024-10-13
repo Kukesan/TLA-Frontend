@@ -23,13 +23,18 @@ ChartJS.register(
 );
 
 const BarChart = ({ counts, answerValues }) => {
-  console.log(counts, answerValues);
+  // Calculate total count
+  const totalCount = counts.reduce((sum, count) => sum + count, 0);
+
+  // Calculate percentage for each count
+  const percentageData = counts.map(count => ((count / totalCount) * 100).toFixed(2));
+
   const data = {
     labels: answerValues,
     datasets: [
       {
         label: "",
-        data: counts,
+        data: percentageData,
         backgroundColor: ["#002245", "#002245"],
         borderColor: ["#002245", "#002245"],
         borderWidth: 1,
@@ -46,6 +51,14 @@ const BarChart = ({ counts, answerValues }) => {
       },
       title: {
         display: false, // Hide title
+      },
+      tooltip: {
+        callbacks: {
+          label: function (context) {
+            const percentage = context.raw; // Get the percentage value
+            return `${percentage}%`; // Show percentage in tooltip
+          },
+        },
       },
     },
     scales: {
